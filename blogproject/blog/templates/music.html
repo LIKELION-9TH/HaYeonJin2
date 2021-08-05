@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+        
+
+<section>
+
+{% block content %}
+ 
+    <br>
+ 
+    {% for music in musics %}
+        <main role="main" class="container">
+            <div class="jumbotron">
+                <h2>{{ music.title }}</h2>
+                <br>
+                <h4>{{ music.pub_date }}</h4>
+                <br>
+                <a class="btn btn-lg btn-primary" href="{% url 'musicviewdetail' music.id %}" role="button">View Details &raquo;</a>
+            </div>
+        </main>
+    {% endfor %}
+ 
+{% endblock %} 
+</section>
+		
+{% endblock %}

@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+      
+      <section class="main-slider">
+         <ul class="bxslider">
+            <li><div class="slider-item"><img src="{% static 'images/야자수노을.jpg' %}" title="Funky roots" /><h2><a href="post.html" title="Vintage-Inspired Finds for Your Home">Oceanview with Sunset</a></h2></div></li>
+            <li><div class="slider-item"><img src="{% static 'images/베트남하늘.jpg' %}" title="Funky roots" /><h2><a href="post.html" title="Vintage-Inspired Finds for Your Home">Vietnam Beautiful Skyview</a></h2></div></li>
+            <li><div class="slider-item"><img src="{% static 'images/강릉해돋이.jpg' %}" title="Funky roots" /><h2><a href="post.html" title="Vintage-Inspired Finds for Your Home">Gangneung Sunrise</a></h2></div></li>
+         </ul>
+      </section>
+      <section>
+         <div class="row">
+            <div class="col-md-8">
+				 <!--{% block content %}-->
+ 
+            
+
+
+            <!--{% for music in musics %}
+               
+               <article class="blog-post">
+                  <div class="blog-post-body">
+                     <h2><a href="{% url 'musicviewdetail' music.id %}">{{ music.title }}</a></h2>
+                     <div class="post-meta"><span>by <a href="{% url 'aboutme' %}">Ha Yeon Jin</a></span>/<span><i class="fa fa-clock-o"></i>{{ music.pub_date }}</span></div>
+                     <p>
+                        {{ music.content }}
+                     </p>
+                        <div class="read-more"><a href="{% url 'musicviewdetail' music.id %}">Continue Reading</a></div>
+                  </div>
+               </article>
+               {% endfor %}-->
+               <article>
+                  {% for music in musics %}
+                  <main role="main" class="container">
+                     <div class="jumbotron">
+                        <h2>{{ music.title }}</h2>
+                        <br>
+                        <h4>{{ music.pub_date }}</h4>
+                        <br>
+                        <a class="btn btn-lg btn-primary" href="{% url 'musicviewdetail' music.id %}" role="button">View Details &raquo;</a>
+                     </div>
+                  </main>
+               {% endfor %}
+               </article>
+
+
+
+
+               <!-- article -->
+               <article class="blog-post">
+                  <div class="blog-post-body">
+                     <h2>Welcome to My Blog!</a></h2>
+                     <div class="post-meta"><span>by <a href="{% url 'aboutme' %}">Ha Yeon Jin</a></span>/<span><i class="fa fa-clock-o"></i>2021-07-31</span></div>
+                     <br><p> 
+						 안녕하세요! 제가 처음으로 만든 블로그에 오신 것을 환영합니다. <br><br>블로그는 제가 좋아하는 취미, 장소, 음악, 제가 찍은 사진들, 저에 대한 소개로 구성되어 있으며
+						 글쓰기는 navbar의 Post 메뉴를 이용하면 됩니다. admin 계정은 ID:ha PW: ha 입니다. Social 부분은 facebook, instagram 만 활성화되어있습니다.<br><br>
+						 글쓰기 창에서는 ckeditor 기능을 사용하여 사진 첨부, 링크 등록 등 글쓰기에 있어 효율을 높이고자 했습니다. Post에서 사진 등록은 ckeditor의 상단 메뉴에서 "이미지
+						 -업로드-파일 선택-서버 전송-크기 조정 등" 의 과정을 거쳐 등록할 수 있습니다. <br>
+						 <br> 현재는 글의 카테고리별로 모델, 함수, html 등이 따로 존재하여 다소 비효율적인 구성이지만, 추후 쿼리셋 필터 기능을 더 공부하여 카테고리를 선택하여 글을 등록하고 카테고리에 따라 글을 모아볼 수 있는 기능, 댓글 등록 기능을 추가하려고 합니다. 좋은 피드백 주시면 감사하겠습니다:)
+						 이 블로그를 만든 저에 대해 궁금하시면 아래의 버튼을 눌러주세요.
+					 </p>
+                     <div class="read-more"><a href="{% url 'aboutme' %}">Continue Reading</a></div>
+                  </div>
+               </article>
+            </div>
+            <div class="col-md-4 sidebar-gutter">
+               <aside>
+
+         {% endblock %}
+               <!-- sidebar-widget -->
+               <div class="sidebar-widget">
+                  <h3 class="sidebar-title">About Me</h3>
+                  <div class="widget-container widget-about">
+                     <a href="post.html"><img src="{% static 'images/yjheart.jpg' %}" alt="프로필사진"></a>
+                     <h4>Ha Yeon Jin</h4>
+                     <div class="author-title">Beginner Developer</div>
+                     <p>성신여자대학교 멋사 9기 하연진입니다. <br>더 자세한 정보가 궁금하시다면 프로필 페이지로 <a href="{% url 'aboutme' %}" color="blue">이동</a> </p>
+                  </div>
+               </div>
+               <!-- sidebar-widget -->
+               <div class="sidebar-widget">
+                  
+               </div>
+               <!-- sidebar-widget -->
+               <div class="sidebar-widget">
+                  <h3 class="sidebar-title">Socials</h3>
+                  <div class="widget-container">
+                     <div class="widget-socials">
+                        <a href="https://www.facebook.com/profile.php?id=100051282008415"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/__jinhaiz/"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-reddit"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- sidebar-widget -->
+               <div class="sidebar-widget">
+                  <h3 class="sidebar-title">Categories</h3>
+                  <div class="widget-container">
+                     <ul>
+                        <li><a href="{% url 'pastime' %}">Pastime</a></li>
+                        <li><a href="{% url 'place' %}">Place</a></li>
+                        <li><a href="{% url 'music' %}">Music</a></li>
+                        <li><a href="{% url 'photo' %}">Photo</a></li>
+                        <li><a href="{% url 'aboutme' %}">About Me</a></li>
+                     </ul>
+                  </div>
+               </div>
+               </div>
+               </aside>
+            </div>
+         </div>
+      </section>
+      </div><!-- /.container -->
+
+      {% endblock %} 

@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+
+		<section>
+			<div class="row">
+				<div class="col-md-8">
+					<article class="blog-post">
+						<div class="blog-post-image">
+							<a href="home.html"><img src="{% static 'images/750x500-5.jpg' %}" alt=""></a>
+						</div>
+						<div class="blog-post-body">
+							<h2>Let's introduce myself!</a></h2>
+							<div class="post-meta"><span>by <a href="#">Ha Yeon Jin</a></span>/<span><i class="fa fa-clock-o"></i> 20, July 2021</span></div>
+							<br>
+							<br>
+							<div class="blog-post-text">
+								<span><i class="far fa-lightbulb"></i><h3>기획부터 개발까지 전과정을 진두지휘하는 IT 기획*개발자<h3></span>
+									<br>
+									<br>
+									<h4># 어떤 학교에 재학중 ?  무엇을 배우나요 ?</h4>
+								<p>현재 성신여자대학교 글로벌 비즈니스학과에 재학중인 하연진입니다. <br>저는 글로벌 비즈니스학과에서 세계화 시대에 발맞춘 국제경영과 세계경제에 관해 배우고 있습니다. 특히 "서비스 기획, 프로젝트 관리, 이커머스 시장, 창업"에 대한 관심이 많아 해당 분야를 배워가고 있습니다.</p>
+									<br>
+									<br>
+									<h4># 어떤 일을 하고싶나요 ?</h4>
+								 <p>관심분야가 다양하여 명확히 하나로 정의내리지 못했지만, 하고 싶은 일을 나열해본다면...<br><br>
+									1. 서비스의 기획부터 개발까지 가능한 IT 기획자 겸 개발자. <br>
+									2. 기획, 마케팅 프로세스에서 빅데이터를 자유자재로 가공, 사용할 수 있는 데이터 사이언티스트<br>
+									3. 위를 바탕으로 본인만의 사업체를 경영하는 벤처창업가.
+								</p>
+								<br>
+								<br>
+								<h4># 앞으로의 계획은 어떻게 되나요 ?</h4>
+								<p>먼저 블로그 프로젝트, 아이디어톤 경매 사이트 프로젝트를 무사히 완성하고 추후 있을 각종 해커톤에 성공적으로 기여하기 위한 프로그래밍 실력을 쌓는데 집중할 예정입니다. 더불어 방학 기간동안 학기중에 수강한 빅데이터에 대한 배움과 흥미를 이어나가고 기획, 마케팅 등 여러 분야에서 활용하기 위해 빅데이터 분석기사 자격증을 준비할 예정입니다.</p>
+								<br>
+								<br>
+								<h4># 올해 최종목표는 무엇인가요 ?</h4>
+								<p>앞서 말했듯 멋사의 모든 활동을 성공적으로 수행하고 이를 바탕으로 올해 안에 직접 개발한 웹서비스를 "배포, 운영"까지 해보는 것이 최종목표입니다.</p>	
+								<br>
+								<br>
+								<h4># 하고 싶은 말 ?</h4>
+								<p>저의 TMI 대방출을 읽어주셔서 감사합니다:D..쑥쓰// </p>
+								</div>
+						</div>
+					</article>
+				</div>
+				<div class="col-md-4 sidebar-gutter">
+					<aside>
+					<!-- sidebar-widget -->
+					<div class="sidebar-widget">
+						<h3 class="sidebar-title">About Me</h3>
+						<div class="widget-container widget-about">
+							<a href="post.html"><img src="{% static 'images/yjheart.jpg' %}" alt="프로필사진"></a>
+							<h4>Ha Yeon Jin</h4>
+							<div class="author-title">Beginner Developer</div>
+							<p>성신여자대학교 멋사 9기 하연진입니다. <br>더 자세한 정보가 궁금하시다면 프로필 페이지로 <a href="{% url 'aboutme' %}" color="blue">이동</a> </p>
+						</div>
+					</div>
+					<!-- sidebar-widget -->
+			
+					<!-- sidebar-widget -->
+					<div class="sidebar-widget">
+						<h3 class="sidebar-title">Socials</h3>
+						<div class="widget-container">
+							<div class="widget-socials">
+								<a href="https://www.facebook.com/profile.php?id=100051282008415"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="https://www.instagram.com/__jinhaiz/"><i class="fa fa-instagram"></i></a>
+								<a href=""><i class="fa fa-google-plus"></i></a>
+								<a href="#"><i class="fa fa-dribbble"></i></a>
+								<a href="#"><i class="fa fa-reddit"></i></a>
+							</div>
+						</div>
+					</div>
+					<!-- sidebar-widget -->
+					<div class="sidebar-widget">
+						<h3 class="sidebar-title">Categories</h3>
+						<div class="widget-container">
+							<ul>
+								<li><a href="{% url 'pastime' %}">Pastime</a></li>
+								<li><a href="{% url 'place' %}">Place</a></li>
+								<li><a href="{% url 'music' %}">Music</a></li>
+								<li><a href="{% url 'photo' %}">Photo</a></li>
+								<li><a href="{% url 'aboutme' %}">About Me</a></li>
+							</ul>
+						</div>
+					</div>
+					</div>
+					</aside>
+				</div>
+			</div>
+		</section>
+		</div><!-- /.container -->
+
+{% endblock %}

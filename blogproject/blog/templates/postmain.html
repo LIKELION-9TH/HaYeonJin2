@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+        
+
+<section>
+
+{% block content %}
+ 
+    <br>
+ 
+    {% for blog in blogs %}
+        <main role="main" class="container">
+            <div class="jumbotron">
+                <h2>제목 : {{ blog.title }}</h2>
+                <br>
+                <h4>작성일 : {{ blog.pub_date }}</h4>
+                <br>
+                <h4>작성자 : {{ blog.author }}</h4>
+                <br>
+                <p class="lead">{{ blog.content | safe }}</p>
+                <br>
+                <a class="btn btn-lg btn-primary" href="#" role="button">View Details &raquo;</a>
+            </div>
+        </main>
+    {% endfor %}
+ 
+{% endblock %} 
+</section>
+		
+{% endblock %}

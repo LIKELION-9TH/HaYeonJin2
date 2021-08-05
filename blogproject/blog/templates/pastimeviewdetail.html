@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+
+		<section>
+			<div class="row">
+				<div class="col-md-8">
+					<article class="blog-post">
+						<div class="blog-post-image">
+							<a href="home.html"><img src="{% static 'images/750x500-5.jpg' %}" alt=""></a>
+						</div>
+						<div class="blog-post-body">
+							<h2>{{ pastime_detail.title }}</a></h2>
+							<div class="post-meta"><span>by <a href="aboutme">Ha Yeon Jin</a></span>/<span><i class="fa fa-clock-o"></i> {{ pastime_detail.pub_date }}</span></div>
+							<br>
+							<div class="blog-post-text">								<p>
+									{{ pastime_detail.content | safe }}
+								</p>	
+								</div>
+						</div>
+					</article>
+				</div>
+				<div class="col-md-4 sidebar-gutter">
+					<aside>
+					<!-- sidebar-widget -->
+					<div class="sidebar-widget">
+						<h3 class="sidebar-title">About Me</h3>
+						<div class="widget-container widget-about">
+							<a href="post.html"><img src="{% static 'images/yjheart.jpg' %}" alt="프로필사진"></a>
+							<h4>Ha Yeon Jin</h4>
+							<div class="author-title">Beginner Developer</div>
+							<p>성신여자대학교 멋사 9기 하연진입니다. <br>더 자세한 정보가 궁금하시다면 프로필 페이지로 <a href="profile.html" color="blue">이동</a> </p>
+						</div>
+					</div>
+					<!-- sidebar-widget -->
+				
+					<!-- sidebar-widget -->
+					<div class="sidebar-widget">
+						<h3 class="sidebar-title">Socials</h3>
+						<div class="widget-container">
+							<div class="widget-socials">
+								<a href="https://www.facebook.com/profile.php?id=100051282008415"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="https://www.instagram.com/__jinhaiz/"><i class="fa fa-instagram"></i></a>
+								<a href="#"><i class="fa fa-google-plus"></i></a>
+								<a href="#"><i class="fa fa-dribbble"></i></a>
+								<a href="#"><i class="fa fa-reddit"></i></a>
+							</div>
+						</div>
+					</div>
+					<!-- sidebar-widget -->
+					<div class="sidebar-widget">
+						<h3 class="sidebar-title">Categories</h3>
+						<div class="widget-container">
+							<ul>
+								<li><a href="{% url 'pastime' %}">Pastime</a></li>
+								<li><a href="{% url 'place' %}">Place</a></li>
+								<li><a href="{% url 'music' %}">Music</a></li>
+								<li><a href="{% url 'photo' %}">Photo</a></li>
+								<li><a href="{% url 'aboutme' %}">About Me</a></li>
+							</ul>
+						</div>
+					</div>
+					</div>
+					</aside>
+				</div>
+			</div>
+		</section>
+		</div><!-- /.container -->
+
+{% endblock %}

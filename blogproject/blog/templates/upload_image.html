@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+
+
+    <title>Upload</title>
+</head>
+<body>
+    <form method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+</body>
+ 
+
+
+
+
+
+{% endblock %}
